@@ -1,0 +1,29 @@
+server:
+  port: 15555
+
+logging:
+  file: "logs/cacoota.log"
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss.SSS} ${PID:-} [%thread] %clr(%-5p) %C.%M:%L - %m%n"
+    file: "%d{yyyy/MM/dd-HH:mm:ss.SSS} [%thread] %-5p %C.%M:%L - %m%n"
+  group:
+    boot: org.springframework.boot.autoconfigure,org.springframework.boot.logging,org.springframework.boot.context,org.springframework.boot.web,org.springframework.boot.admin
+  level:
+    root: error
+    web: info
+    sql: debug
+    tomcat: info
+    boot: info
+    org:
+      springframework:
+        security:
+          core: info
+          web: info
+          config: info
+        jdbc:
+          core: debug
+        apache:
+          ibatis:
+            logging: debug
+    com:
+      cacoota: trace
