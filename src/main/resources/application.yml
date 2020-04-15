@@ -7,9 +7,9 @@ logging:
     console: "%d{yyyy/MM/dd-HH:mm:ss.SSS} ${PID:-} [%thread] %clr(%-5p) %C.%M:%L - %m%n"
     file: "%d{yyyy/MM/dd-HH:mm:ss.SSS} [%thread] %-5p %C.%M:%L - %m%n"
   group:
-    boot: org.springframework.boot.autoconfigure,org.springframework.boot.logging,org.springframework.boot.context,org.springframework.boot.web,org.springframework.boot.admin
+    boot: org.springframework.boot,org.springframework.boot.autoconfigure,org.springframework.boot.logging,org.springframework.boot.context,org.springframework.boot.web,org.springframework.boot.admin
   level:
-    root: error
+    root: info
     web: info
     sql: debug
     tomcat: info
