@@ -2,7 +2,6 @@ server:
   port: 15555
 
 logging:
-  file: "logs/cacoota.log"
   pattern:
     console: "%d{yyyy/MM/dd-HH:mm:ss.SSS} ${PID:-} [%thread] %clr(%-5p) %C.%M:%L - %m%n"
     file: "%d{yyyy/MM/dd-HH:mm:ss.SSS} [%thread] %-5p %C.%M:%L - %m%n"
@@ -16,10 +15,6 @@ logging:
     boot: info
     org:
       springframework:
-        security:
-          core: info
-          web: info
-          config: info
         jdbc:
           core: debug
         apache:
@@ -27,3 +22,12 @@ logging:
             logging: debug
     com:
       cacoota: trace
+
+spring:
+  thymeleaf:
+    enabled: true
+    cache: false
+    suffix: .html
+    encoding: UTF-8
+
+

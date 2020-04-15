@@ -368,4 +368,7 @@ gradle-app.setting
 .git
 .gitee
 
-gradle
+gradleworkspace
+.project
+.classpath
+workspace
