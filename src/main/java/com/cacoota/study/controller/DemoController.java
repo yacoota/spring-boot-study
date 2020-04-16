@@ -6,6 +6,7 @@ import com.cacoota.study.model.DemoExample;
 import com.cacoota.study.service.DemoService;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
+import org.jasypt.encryption.StringEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -60,6 +61,16 @@ public class DemoController {
         DemoExample example = new DemoExample();
         example.createCriteria().andIdEqualTo(Long.valueOf(id));
         service.delete(example);
+    }
+
+
+    @Autowired
+    private StringEncryptor encryptor;
+
+    @GetMapping("/encode/{code}")
+    @ResponseStatus(HttpStatus.OK)
+    public String encoder(@PathVariable String code) {
+        return encryptor.encrypt(code);
     }
 
 }

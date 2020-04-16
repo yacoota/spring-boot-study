@@ -30,9 +30,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:28000/webchat?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
-      username: root
-      password:
+      url: ENC(Mu3hZTFCKx5/DN4wgVa7i6t0LBCNkKX9PWM5M4epYSZzbUKljyyOssePFWoLS7iWfuM0afYWktsFp6pJikdqR59lhEK+vZ+zVeYd+xnY9xNwXsgw7qahs3HPTQMRQGeFkN8M2nG76RT7gF/5hvyjpvKCdSJnxbmNWVWL+kP+sdFzxkbAWdbYfd9vG87eeDtsPG0aGetne3A+zJ3Pw/+eSUax7dEgpUdf4IBVH5hN1u4=)
+      username: ENC(Ysj+Zkk6WLIx6dpD+gAs0iij440SWqc/NIXOCsMf2ky4rLaL23Gp/wnnG4WqBbsA)
+      password: ENC(q4vCQmkuZd9Ckc05Gyw38440q1hrt+iT2EP2G5T9xf7EK9ypNLn/fwPRSAgxn3eL)
       initial-size: 5
       min-idle: 3
       max-active: 100
