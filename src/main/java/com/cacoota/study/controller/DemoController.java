@@ -1,9 +1,9 @@
 package com.cacoota.study.controller;
 
 
-import com.cacoota.study.model.Demo;
-import com.cacoota.study.model.DemoExample;
-import com.cacoota.study.service.DemoService;
+import com.cacoota.study.model.mybatis.Demo;
+import com.cacoota.study.model.mybatis.DemoExample;
+import com.cacoota.study.service.mybatis.DemoService;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.jasypt.encryption.StringEncryptor;

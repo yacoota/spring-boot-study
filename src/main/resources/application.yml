@@ -48,7 +48,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mybatis/*Mapper.xml
-  type-aliases-package: com.cacoota.*.model
+  type-aliases-package: com.cacoota.*.mybatis.model
 
 pagehelper:
   helperDialect: mysql
@@ -56,3 +56,9 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
   returnPageInfo: check
+
+study:
+  task:
+    hack:
+      init: 60000
+      fixed: 30000

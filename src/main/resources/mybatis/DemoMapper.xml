@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.cacoota.study.mapper.DemoMapper" >
-  <resultMap id="BaseResultMap" type="com.cacoota.study.model.Demo" >
+<mapper namespace="com.cacoota.study.mapper.mybatis.DemoMapper" >
+  <resultMap id="BaseResultMap" type="com.cacoota.study.model.mybatis.Demo" >
     <result column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
@@ -9,7 +9,7 @@
     <result column="region" property="region" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.cacoota.study.model.Demo" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="com.cacoota.study.model.mybatis.Demo" extends="BaseResultMap" >
     <result column="description" property="description" jdbcType="LONGVARBINARY" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -76,7 +76,7 @@
   <sql id="Blob_Column_List" >
     description
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.cacoota.study.model.DemoExample" >
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.cacoota.study.model.mybatis.DemoExample" >
     select
     <if test="distinct" >
       distinct
@@ -92,7 +92,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cacoota.study.model.DemoExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cacoota.study.model.mybatis.DemoExample" >
     select
     <if test="distinct" >
       distinct
@@ -106,13 +106,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.cacoota.study.model.DemoExample" >
+  <delete id="deleteByExample" parameterType="com.cacoota.study.model.mybatis.DemoExample" >
     delete from demo
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.cacoota.study.model.Demo" >
+  <insert id="insert" parameterType="com.cacoota.study.model.mybatis.Demo" >
     insert into demo (id, name, sex, 
       birthday, region, remark, 
       description)
@@ -120,7 +120,7 @@
       #{birthday,jdbcType=TIMESTAMP}, #{region,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
       #{description,jdbcType=LONGVARBINARY})
   </insert>
-  <insert id="insertSelective" parameterType="com.cacoota.study.model.Demo" >
+  <insert id="insertSelective" parameterType="com.cacoota.study.model.mybatis.Demo" >
     insert into demo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -169,7 +169,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.cacoota.study.model.DemoExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.cacoota.study.model.mybatis.DemoExample" resultType="java.lang.Integer" >
     select count(*) from demo
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
