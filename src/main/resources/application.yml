@@ -45,6 +45,31 @@ spring:
       test-on-return: false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+#  redis:
+#    cluster:
+#      nodes: ENC(Xq8qI7MDH7uMegBZ077fQG/u9SUE8jiTQ5Y0k8MpmZXj67qF2HoNKCYGq4hPYTLG/tfws+R7Hs8Pbg2obYDiGgXszVuu1bVasJF7IBOzAAQ=)
+#    password:
+#    timeout: 30000
+#    lettuce:
+#      pool:
+#        max-active: 200
+#        max-idle: 20
+#        min-idle: 5
+#        max-wait: 5000
+  data:
+    mongodb:
+      host: ENC(IJx+2rlwM+NvB302Yuhv27XcelSQjspCaU/7H/MicszIVsD8IZIw1xUxf0yei6qD)
+      port: 15011
+      database: ENC(Dnn6DPsM06y+NmcjzJi4VaFJl0v20FhM5ao69/YjhIjDoDV6NdwBsbPchlGT9tWf)
+      username: ENC(WYoJjJY3ypRqqtI/UHwXS2rrjatLxALIHL2xX/bO8H71liW1/lWoj19bf60Tzv9C)
+      password: ENC(akudvc3iCzlHwj75GFaHH8PbGVGuplmdfn8NXaCyo432bIt+9KtgwX5wJsj+2xtd)
+    elasticsearch:
+      cluster-name: ENC(Gg0KhclsNVojwEkDVMp2OEwDYElicdw6do8KnkEnmdhOwny1aNWEYX90qtQi0TT2)
+      cluster-nodes: ENC(vxV3RDMgzUbvbh2Yr0mtel+Sn6wVTeLIwezAN916t/MpIyyeHWwhZjlDsyJpKH3HOuTKt0q9Sb0edC6/UL4eXhwBaWev/HBzhXjgKxnFKFI=)
+      properties:
+        transport:
+          tcp:
+            connect_timeout: 120s
 
 mybatis:
   mapper-locations: classpath:mybatis/*Mapper.xml
