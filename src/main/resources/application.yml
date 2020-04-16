@@ -2,9 +2,6 @@ server:
   port: 15555
 
 logging:
-  pattern:
-    console: "%d{yyyy/MM/dd-HH:mm:ss.SSS} ${PID:-} [%thread] %clr(%-5p) %C.%M:%L - %m%n"
-    file: "%d{yyyy/MM/dd-HH:mm:ss.SSS} [%thread] %-5p %C.%M:%L - %m%n"
   group:
     boot: org.springframework.boot,org.springframework.boot.autoconfigure,org.springframework.boot.logging,org.springframework.boot.context,org.springframework.boot.web,org.springframework.boot.admin
   level:
@@ -29,5 +26,33 @@ spring:
     cache: false
     suffix: .html
     encoding: UTF-8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:28000/webchat?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
+      username: root
+      password:
+      initial-size: 5
+      min-idle: 3
+      max-active: 100
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
 
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: com.cacoota.*.model
 
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
