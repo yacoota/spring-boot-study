@@ -38,6 +38,11 @@ ext {
     pagehelper_version = "1.2.13"
     druid_spring_version = "1.1.22"
     mysql_java_version = "5.1.48"
+    commons_lang3_version = "3.10"
+    commons_text_version = "1.8"
+    commons_pool2_version = "2.8.0"
+    commons_collections4_version = "4.4"
+    commons_io_version = "2.6"
 }
 
 dependencies {
@@ -57,6 +62,12 @@ dependencies {
     implementation "com.github.ulisesbocchio:jasypt-spring-boot-starter:${jasypt_version}"
     implementation "com.google.code.findbugs:annotations:${findbugs_version}"
 
+    implementation "org.apache.commons:commons-lang3:${commons_lang3_version}"
+    implementation "org.apache.commons:commons-text:${commons_text_version}"
+    implementation "org.apache.commons:commons-pool2:${commons_pool2_version}"
+    implementation "org.apache.commons:commons-collections4:${commons_collections4_version}"
+    implementation "commons-io:commons-io:${commons_io_version}"
+
     runtimeOnly "mysql:mysql-connector-java:${mysql_java_version}"
 
     implementation 'org.webjars.npm:bootstrap:4.4.1'
@@ -68,6 +79,7 @@ dependencies {
     compileOnly "org.projectlombok:lombok"
     annotationProcessor "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+
 }
 
 sourceSets {

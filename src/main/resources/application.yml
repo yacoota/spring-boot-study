@@ -1,25 +1,6 @@
 server:
   port: 15555
 
-logging:
-  group:
-    boot: org.springframework.boot,org.springframework.boot.autoconfigure,org.springframework.boot.logging,org.springframework.boot.context,org.springframework.boot.web,org.springframework.boot.admin
-  level:
-    root: info
-    web: info
-    sql: debug
-    tomcat: info
-    boot: info
-    org:
-      springframework:
-        jdbc:
-          core: debug
-        apache:
-          ibatis:
-            logging: debug
-    com:
-      cacoota: trace
-
 spring:
   thymeleaf:
     enabled: true
@@ -45,17 +26,18 @@ spring:
       test-on-return: false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
-#  redis:
-#    cluster:
-#      nodes: ENC(Xq8qI7MDH7uMegBZ077fQG/u9SUE8jiTQ5Y0k8MpmZXj67qF2HoNKCYGq4hPYTLG/tfws+R7Hs8Pbg2obYDiGgXszVuu1bVasJF7IBOzAAQ=)
-#    password:
-#    timeout: 30000
-#    lettuce:
-#      pool:
-#        max-active: 200
-#        max-idle: 20
-#        min-idle: 5
-#        max-wait: 5000
+  redis:
+    cluster:
+      nodes: ENC(ht8Hx1VAEXpdExslyCCSz/V0GNVngpRKrtiDkV3nWViFRFBkQdmvDq08lDE5YRXTmYwFJX/6LC8G8JxWskG250hQvE5nBnlV0/OPTCXPxv8=)
+    password: ENC(KL6jgfFIfM0c29k4d9yzgFBN28mCb39Z1yMT+EyaO6d8gWrXkDtCPvdfdLZxMQY9)
+    timeout: 30000
+    lettuce:
+      pool:
+        max-active: 200
+        max-idle: 20
+        min-idle: 5
+        max-wait: 5000
+
   data:
     mongodb:
       host: ENC(IJx+2rlwM+NvB302Yuhv27XcelSQjspCaU/7H/MicszIVsD8IZIw1xUxf0yei6qD)

@@ -4,6 +4,7 @@ package com.cacoota.study.controller;
 import com.cacoota.study.model.mybatis.Demo;
 import com.cacoota.study.model.mybatis.DemoExample;
 import com.cacoota.study.service.mybatis.DemoService;
+import com.cacoota.study.service.search.SearchDemoService;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.jasypt.encryption.StringEncryptor;
@@ -70,7 +71,6 @@ public class DemoController {
     @GetMapping("/encode/{code}")
     @ResponseStatus(HttpStatus.OK)
     public String encoder(@PathVariable String code) {
-        System.out.println(encryptor.decrypt("Zh7VU8krZ6CiSZqebuO6sFY//G413yX0sPhqZKAIqvrvLA1jcwr8+m+uUaVIUbmzVhbnpOIQjUbD1A0/xFqFBTrMFRZ76b+6uX/ZpaxqLfC8SXtpDL0aO6AfWdOWH92b"));
         return encryptor.encrypt(code);
     }
 
